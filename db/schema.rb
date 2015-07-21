@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150721191537) do
+ActiveRecord::Schema.define(version: 20150721203424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20150721191537) do
     t.string   "sat_closed_times"
     t.string   "sun_open_times"
     t.string   "sun_closed_times"
+    t.string   "address"
   end
 
 end

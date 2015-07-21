@@ -29,12 +29,12 @@ class BottleStoresController < ApplicationController
 
     def update
       respond_to do |format|
-        if @Bottle_store.update(booz_params)
+        if @bottle_store.update(booz_params)
           format.html { redirect_to bottle_store_path, notice: 'BottleStore was successfully updated.' }
-          format.json { render :show, status: :ok, location: @Bottle_store }
+          format.json { render :show, status: :ok, location: @bottle_store }
         else
           format.html { render :edit }
-          format.json { render json: @Bottle_store.errors, status: :unprocessable_entity }
+          format.json { render json: @bottle_store.errors, status: :unprocessable_entity }
         end
       end
     end
@@ -50,7 +50,7 @@ class BottleStoresController < ApplicationController
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_BottleStore
-        @BottleStore = BottleStore.find(params[:id])
+        @bottle_store = BottleStore.find(params[:id])
       end
 
       # Never trust parameters from the scary internet, only allow the white list through.
