@@ -55,6 +55,6 @@ class BottleStoresController < ApplicationController
 
       # Never trust parameters from the scary internet, only allow the white list through.
       def booz_params
-        params.require(:bottle_store).permit(:name, :open_time, :closed_time, :latitude, :longitude, :sat_open_times, :sat_closed_times, :sun_open_times, :sun_closed_times)
+        params.require(:bottle_store).permit(:name, :open_time, :closed_time, :latitude, :longitude, :sat_open_times, :sat_closed_times, :sun_open_times, :sun_closed_times, :address)
       end
 end
