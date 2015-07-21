@@ -1,0 +1,54 @@
+<%= form_for(@bottle_store, html: { multipart: true }) do |f| %>
+  <% if @bottle_store.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bottle_store.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @bottle_store.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+  <%= f.label :latitude %><br>
+  <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+  <%= f.label :longitude %><br>
+  <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :open_time %><br>
+    <%= f.text_field :open_time %>
+  </div> 
+   <div class="field">
+    <%= f.label :closed_time %><br>
+    <%= f.text_field :closed_time %>
+  </div>
+  <div class="field">
+  <%= f.label :sat_open_times %><br>
+  <%= f.text_field :sat_open_times %>
+  </div>
+  <div class="field">
+  <%= f.label :sat_closed_times %><br>
+  <%= f.text_field :sat_closed_times %>
+  </div>
+  <div class="field">
+  <%= f.label :sun_open_times %><br>
+  <%= f.text_field :sun_open_times %>
+  </div>
+  <div class="field">
+  <%= f.label :sun_closed_times %><br>
+  <%= f.text_field :sun_closed_times %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
